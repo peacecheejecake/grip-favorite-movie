@@ -1,9 +1,31 @@
-// @use '/src/styles/constants/colors';
-@use '/src/styles';
+@use '@styles/index';
+@use '@styles/constants/colors';
+@use '@styles/mixins/position';
 
-.app {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.wrapper {
+  width: 100vw;
   height: 100vh;
+  background-color: colors.$GRAY2;
+
+  .app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 460px;
+    height: 90vh;
+    margin: auto;
+    border-radius: 50px;
+    @include position.absolute((0, 0));
+    transition: 300ms;
+  }
+
+  .light {
+    color: colors.$GRAY9;
+    background-color: colors.$WHITE;
+  }
+
+  .dark {
+    color: colors.$GRAY0;
+    background-color: colors.$GRAY8;
+  }
 }
