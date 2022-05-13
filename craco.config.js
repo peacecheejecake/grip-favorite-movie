@@ -6,9 +6,10 @@ module.exports = {
       '@': path.resolve(__dirname, 'src/'),
       '@components': path.resolve(__dirname, 'src/components'),
       '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@states': path.resolve(__dirname, 'src/states'),
       '@styles': path.resolve(__dirname, 'src/styles'),
-      '@colors': path.resolve(__dirname, 'src/styles/constants/_colors.scss'),
-      '@levels': path.resolve(__dirname, 'src/styles/constants/_levels.scss'),
+      '@services': path.resolve(__dirname, 'src/services'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
     },
   },
 };

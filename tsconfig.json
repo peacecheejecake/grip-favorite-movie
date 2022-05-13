@@ -24,12 +24,13 @@
       "@/*": ["./*"],
       "@components/*": ["./components/*"],
       "@hooks/*": ["./hooks/*"],
-      "@colors/*": ["./colors"],
-      "@levels/*": ["./levels"],
-      "@styles/*": ["./styles/*"]
+      "@styles/*": ["./styles/*"],
+      "@states/*": ["./states/*"],
+      "@assets/*": ["./assets/*"],
+      "@services/*": ["./services/*"]
     }
   },
   "include": [
-    "src"
+    "src/**/*"
   ]
 }

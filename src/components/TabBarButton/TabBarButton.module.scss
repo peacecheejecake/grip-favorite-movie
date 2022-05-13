@@ -1,3 +1,33 @@
+@use '@styles/constants/colors';
+@use '@styles/constants/levels';
+@use '@styles/mixins/flexbox';
+
 .tabBarButton {
+  @include flexbox.vertical(center, center);
+  z-index: levels.$TABBAR_BUTTON;
+  width: 100%;
   height: 100%;
+  transition: 300ms;
+}
+
+.icon {
+  color: colors.$GRAY0;
+  fill: colors.$GRAY0;
+  transform: scale(65%);
+}
+
+.title {
+  color: colors.$GRAY0;
+}
+
+.selected {
+  background-color: colors.$PRIMARY;
+}
+
+.unselected {
+  background-color: transparent;
+
+  // &:hover {
+  //   background-color: rgba(colors.$PRIMARY, 12%);
+  // }
 }

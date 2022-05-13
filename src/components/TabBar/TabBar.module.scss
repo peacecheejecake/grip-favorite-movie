@@ -1,5 +1,45 @@
 @use '@styles/constants/colors';
+@use '@styles/constants/levels';
+@use '@styles/mixins/position';
+@use '@styles/mixins/flexbox';
 
-.tabBarWrapper {
+.wrapper {
+  @include position.absolute(auto auto 3%);
+  @include flexbox.horizontal(around, center);
+  z-index: levels.$TABBAR_BACKGROUND;
+  width: 50%;
+  height: 10%;
+  border-radius: 30px;
+  box-shadow: 4px 2px 10px rgba(colors.$GRAY9, 0.2);
+}
+
+.on {
+  background-color: rgba(colors.$PRIMARY, 50%);
+  opacity: 1;
+}
+
+.off {
+  opacity: 0.4;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.selectionBox {
+  @include position.absolute(0 0);
+  z-index: levels.$TABBAR_SELECTION;
+  width: 50%;
+  height: 100%;
   background-color: colors.$PRIMARY;
+  border-radius: 30px;
+  transition: left 300ms;
+}
+
+.selectionBox[data-tab-idx='0'] {
+  left: 0;
+}
+
+.selectionBox[data-tab-idx='1'] {
+  left: 50%;
 }

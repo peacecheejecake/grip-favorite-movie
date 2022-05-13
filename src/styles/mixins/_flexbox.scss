@@ -11,14 +11,23 @@ $FLEX_MAP: (
   @return map-get($FLEX_MAP, $key);
 }
 
-@mixin flexbox($jc: center, $ai: center) {
+@mixin _flexbox($jc: center, $ai: center) {
   display: flex;
   align-items: _getFlexValue($ai);
   justify-content: _getFlexValue($jc);
 }
 
-@mixin inlineFlexbox($jc: center, $ai: center) {
+@mixin horizontal($jc: center, $ai: center) {
+  @include _flexbox($jc, $ai);
+  flex-direction: row;
+}
+
+@mixin vertical($jc: center, $ai: center) {
+  @include _flexbox($jc, $ai);
+  flex-direction: column;
+}
+
+@mixin inline($jc: center, $ai: center) {
+  @include _flexbox($jc, $ai);
   display: inline-flex;
-  align-items: _getFlexValue($ai);
-  justify-content: _getFlexValue($jc);
 }

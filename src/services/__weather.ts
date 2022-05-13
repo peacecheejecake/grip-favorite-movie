@@ -1,5 +1,5 @@
 import { axios } from 'hooks/worker';
-import { IWeatherAPIRes } from 'types/weather.d';
+import { IWeatherAPIRes } from '@/types/__weather';
 
 const WEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
