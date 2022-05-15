@@ -1,14 +1,14 @@
-@use '@styles/constants/colors';
-@use '@styles/constants/levels';
-@use '@styles/mixins/position';
-@use '@styles/mixins/flexbox';
+@use 'styles/constants/colors';
+@use 'styles/constants/levels';
+@use 'styles/mixins/position';
+@use 'styles/mixins/flexbox';
 
 .wrapper {
   @include position.absolute(auto auto 3%);
-  @include flexbox.horizontal(around, center);
+  @include flexbox.horizontal(center, center);
   z-index: levels.$TABBAR_BACKGROUND;
-  width: 50%;
-  height: 10%;
+  width: 40%;
+  height: 8.5%;
   border-radius: 30px;
   box-shadow: 4px 2px 10px rgba(colors.$GRAY9, 0.2);
 }

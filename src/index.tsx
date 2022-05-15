@@ -2,18 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
+import { QueryClientProvider, QueryClient } from 'react-query';
 import Routes from './routes';
-
-// import reportWebVitals from './reportWebVitals';
 import './styles/index.scss';
+// import reportWebVitals from './reportWebVitals';
 
+const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
 root.render(
   <React.StrictMode>
     <RecoilRoot>
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </QueryClientProvider>
     </RecoilRoot>
   </React.StrictMode>
 );

@@ -15,10 +15,10 @@ export default function TabBar() {
   };
 
   return (
-    <div className={cx([styles.wrapper, styles.on])}>
+    <nav className={cx([styles.wrapper, styles.on])}>
       <TabBarButton tabIdx={0} title="검색" Icon={SearchIcon} onClick={handleButtonClick} />
-      <TabBarButton tabIdx={1} title="즐겨찾기" Icon={StarIcon} onClick={handleButtonClick} />
+      <TabBarButton tabIdx={1} title={`즐겨찾기(${'.'})`} Icon={StarIcon} onClick={handleButtonClick} />
       <div className={styles.selectionBox} data-tab-idx={selectedTab} />
-    </div>
+    </nav>
   );
 }

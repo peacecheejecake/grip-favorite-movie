@@ -1,3 +1,8 @@
+@use '@styles/mixins/flexbox';
+
 .wrapper {
-  
+  @include flexbox.vertical(center baseline);
+  width: 90%;
+  height: 95%;
+  overflow: hidden;
 }

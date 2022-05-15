@@ -1,0 +1,22 @@
+@use 'styles/mixins/flexbox';
+
+.wrapper {
+  @include flexbox.vertical(center baseline);
+  width: 90%;
+  height: 95%;
+  overflow: hidden;
+
+  h1 {
+    width: 95%;
+    margin-top: 10%;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .itemList {
+    @include flexbox.vertical(center baseline);
+    width: 100%;
+    margin-top: 6%;
+    overflow: scroll;
+  }
+}
