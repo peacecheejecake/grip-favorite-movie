@@ -6,7 +6,7 @@ export const fetchData = async (keyword: string, page: number) => {
   if (!keyword) return { data: null, error: null };
 
   const { data } = await axios.get<ResponseData<ResponseItem>>(
-    `http://www.omdbapi.com/?i=tt3896198&apikey=${process.env.REACT_APP_API_KEY}&s=${keyword}&page=${page}`
+    `http://www.omdbapi.com/?i=tt3896198&apikey=f00e2050&s=${keyword}&page=${page}`
   );
 
   if (data?.Search !== undefined) {
